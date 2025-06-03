@@ -6,8 +6,8 @@ set -e
 
 echo "Running pylint on src"
 echo "---------------------------------"
-pylint src/
+pylint production/
 
 echo -e "\n\n --------------------------------- \n\n"
 echo "Running overall score calculation"
-pylint src/ | grep rated
+pylint production/ | grep rated
