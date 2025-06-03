@@ -1,6 +1,6 @@
 import os
-from time import perf_counter, sleep
-from typing import List, Optional, Tuple, Union
+from time import perf_counter
+from typing import List, Tuple, Union
 
 import main.utils.config as constants
 import numpy as np
