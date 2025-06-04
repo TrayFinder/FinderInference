@@ -31,6 +31,7 @@ class EmbeddingSearch:
             )
             print('✅ Loaded ScaNN index from file.')
         else:
+            os.makedirs(constants.INDEX_DIR, exist_ok=True)
             self.index_construction()
             self.loaded_searcher = scann.scann_ops_pybind.load_searcher(
                 constants.INDEX_DIR
