@@ -1,10 +1,9 @@
-import os
 from time import perf_counter
 from typing import List, Tuple, Union
 
-import main.utils.config as constants
+import FinderInference.production.main.utils.config as constants
 import numpy as np
-from main.utils.logger_class import LoggerClass
+from FinderInference.production.main.utils.logger_class import LoggerClass
 from ultralytics import YOLO
 from ultralytics.engine.results import Results
 

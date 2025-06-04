@@ -3,7 +3,7 @@ import logging
 import os
 import time
 
-import main.utils.config as constants
+import FinderInference.production.main.utils.config as constants
 
 
 class LoggerClass:

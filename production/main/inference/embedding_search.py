@@ -1,10 +1,10 @@
 import os
 
 import h5py
-import main.utils.config as constants
+import FinderInference.production.main.utils.config as constants
 import onnxruntime
 import scann
-from main.utils.logger_class import LoggerClass
+from FinderInference.production.main.utils.logger_class import LoggerClass
 
 
 class EmbeddingSearch:

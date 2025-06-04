@@ -1,12 +1,12 @@
 from time import perf_counter
 
 import cv2
-import main.utils.config as constants
+import FinderInference.production.main.utils.config as constants
 import numpy as np
-from main.inference.embedding_search import EmbeddingSearch
-from main.inference.product_detector import ProductDetector
-from main.utils.image_processor import ImageProcessor
-from main.utils.logger_class import LoggerClass
+from FinderInference.production.main.inference.embedding_search import EmbeddingSearch
+from FinderInference.production.main.inference.product_detector import ProductDetector
+from FinderInference.production.main.utils.image_processor import ImageProcessor
+from FinderInference.production.main.utils.logger_class import LoggerClass
 
 
 class AiPipeline:
@@ -96,12 +96,6 @@ class AiPipeline:
         )
         return barcodes
 
-    def __call__(self, image_path):
-        image = cv2.imread(image_path)
+    def __call__(self, image):
         processed_image = self.detector_selector(image)
         return self.embedding_search(processed_image)
-
-
-if __name__ == '__main__':
-    ai = AiPipeline()
-    print(ai(constants.IMAGES_DIR + 'agua_cristal.jpeg'))
